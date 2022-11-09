@@ -1,0 +1,23 @@
+@model IEnumerable<CadeteriaBugMan.Models.Cadete>
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>@ViewData["Title"]</h2>
+
+<div class="list">
+@foreach (var item in Model)
+{    
+    <div class="toggle-list">
+        <section class="panel">
+            <p class="name-cad">@item.Name</p>
+            <p class="arrow-btn">▼</p>
+        </section>
+        <article class="panel-info">
+            <p><b>Nombre: </b>@item.Name</p>
+            <p><b>Dirección: </b>@item.Address</p>
+            <p><b>Tel: </b>@item.Phone</p>
+        </article>
+    </div>
+}
+</div>

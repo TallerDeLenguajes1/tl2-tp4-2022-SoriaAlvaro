@@ -1,4 +1,132 @@
-.Cadete--container_register {
-    background-color: yellowgreen;
-    min-width: 40vw;
-}
+:root {
+    --input-hover-color: #eeeeee75;
+    --main-color: #6c63ff;
+    --input-placeholder-color: #000000be;
+    --btn-color-hover: #6b63fff1;
+    --color-white: #fff;
+    --color-black: #000000c0;
+    --box-shadow: 1px 1px 6px #0000001c;
+  }
+  
+/*   *, *:after, *:before {
+      box-sizing: border-box;
+      margin: 0;
+  } */
+  
+  .form {
+      width: 40%;
+      padding: 3rem;
+  }
+  
+  .input-group {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+  }
+  
+  .input {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 1.1rem;
+  }
+  
+  .input input {
+      margin: 0.6rem 0;
+      padding: 0.8rem 1.2rem;
+      border: none;
+      border-radius: 10px;
+      box-shadow: var(--box-shadow);
+      font-size: 0.8rem;
+  }
+  
+  .input label{
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: var(--color-black);
+  }
+  
+  .input input:hover {
+      background-color: var(--input-hover-color);
+  }
+  .input input:focus-visible{
+      outline: 1px solid var(--main-color);
+  }
+  .input input::placeholder {
+      color: var(--input-placeholder-color);
+  }
+  
+  .guardar--btn {
+      width: 25%;
+      margin-top: 1rem;
+      border: none;
+      background-color: var(--main-color);
+      padding: 0.62rem;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 0.93rem;
+      font-weight: 500;
+      color: var(--color-white);
+      box-shadow: var(--box-shadow)
+  }
+  
+  .guardar--btn:hover {
+      background-color: var(--btn-color-hover);
+  }
+  
+  /* Arrow btn */
+  .list {
+      padding: 1rem;
+      margin-left: auto;
+      margin-right: auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+  }
+  .toggle-list {
+    width: 30%;
+    margin-top: 12px;
+  }
+  .panel {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      /* margin: 0.3rem 0; */
+      padding: 0 1.2rem;
+      border-radius: 10px;
+      box-shadow: var(--box-shadow);
+      cursor: pointer;
+  }
+  .name-cad {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: var(--color-black);
+  }
+  .panel:hover {
+      background-color: var(--input-hover-color);
+      border: 1px solid var(--main-color);
+  }
+  .arrow-btn {
+      font-size: 25px;
+      color: var(--main-color);
+  }
+  .arrow-btn:hover {
+      color: var(--btn-color-hover);
+  }
+  
+  .panel-info {
+      margin: 0.3rem 0;
+      padding: 0.3rem 1.2rem;
+      border-radius: 10px;
+      max-height: 0px;
+      overflow: hidden;
+      transition: max-height 0.2s;
+    }
+    
+    .open-panel--info {
+      box-shadow: var(--box-shadow);
+      max-height: 400px;
+  }
+  
+  .panel-info p {
+      margin: 12px 0;
+  }

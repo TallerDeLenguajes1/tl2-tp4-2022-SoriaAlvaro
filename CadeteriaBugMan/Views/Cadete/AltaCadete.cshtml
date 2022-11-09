@@ -1,0 +1,25 @@
+@model CadeteriaBugMan.Models.Cadete
+@{
+    ViewData["Title"] = "AltaCadete";
+}
+<h2>@ViewData["Title"]</h2>
+
+<div class="form">
+    <form asp-controller="Cadete" asp-action="GuardarCadete" method="post">
+        <div class="input-group">
+            <div class="input">
+                <label for="name">Nombre</label>
+                <input type="text" id="name" asp-for="Name" placeholder="Nombre" required>
+            </div>
+            <div class="input">
+                <label for="direc">Dirección</label>
+                <input type="text" id="direc" asp-for="Address" placeholder="Dirección" required>
+            </div>
+            <div class="input">
+                <label for="phone">Tel</label>
+                <input type="tel" id="phone" asp-for="Phone" placeholder="(+54) Tel" required>
+            </div>
+        </div>
+        <input type="submit" value="Guardar" class="guardar--btn">
+    </form>
+</div>
