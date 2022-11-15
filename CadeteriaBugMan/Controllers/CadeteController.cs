@@ -11,20 +11,28 @@ namespace CadeteriaBugMan.Controllers
     public class CadeteController : Controller
     {
         static List<Cadete> listaCadetes = new List<Cadete>();
+        private int idCad = listaCadetes.Count();
         public IActionResult Index()
         {
             return View(listaCadetes);
         }
         [HttpPost]
         public IActionResult GuardarCadete(Cadete cadete) {
-            cadete.Id++;
-            ViewData["IdCadet"] = cadete.Id;
+            cadete.Id = idCad;
             listaCadetes.Add(cadete);
-            return RedirectToAction("Index",listaCadetes);
+            return RedirectToAction("AltaCadete");
         }
         public IActionResult AltaCadete()
         {
             return View();
+        }
+
+        public IActionResult BorrarCadete(int id){
+            listaCadetes.Remove(listaCadetes.Single(x => x.Id == id));
+            if(listaCadetes.Count() <= 0){
+                return RedirectToAction("AltaCadete");
+            }
+            return RedirectToAction("Index");
         }
     }
 }

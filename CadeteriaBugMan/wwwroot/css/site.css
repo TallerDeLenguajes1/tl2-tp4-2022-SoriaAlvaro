@@ -13,8 +13,37 @@ html {
   min-height: 100%;
 }
 
-body {
+/* body {
   margin-bottom: 60px;
-}
+} */
 
 /* =========================== */
+
+/* lista despegable Cadetes */
+
+.container-li {
+  display: flex;
+  flex-direction: column;
+}
+
+.container-ul {
+  /* width: fit-content; */
+  background-color: #fff;
+  box-shadow: var(--box-shadow);
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  list-style: none;
+  visibility: hidden;
+  margin-top: 40px;
+}
+.ul-container li {
+  /* margin-top: 12px; */
+}
+
+.container-li:hover > ul {
+  visibility: visible;
+  cursor: pointer;
+}
+
+/* ============= */

@@ -6,13 +6,14 @@
     --color-white: #fff;
     --color-black: #000000c0;
     --box-shadow: 1px 1px 6px #0000001c;
+    --btn-color-red: rgb(200, 77, 200);
   }
   
-/*   *, *:after, *:before {
-      box-sizing: border-box;
-      margin: 0;
-  } */
-  
+  .container-alta {
+    display: flex;
+  }
+  .adicional-btn {
+  }
   .form {
       width: 40%;
       padding: 3rem;
@@ -55,34 +56,36 @@
       color: var(--input-placeholder-color);
   }
   
-  .guardar--btn {
-      width: 25%;
-      margin-top: 1rem;
-      border: none;
-      background-color: var(--main-color);
-      padding: 0.62rem;
-      border-radius: 5px;
-      cursor: pointer;
-      font-size: 0.93rem;
-      font-weight: 500;
-      color: var(--color-white);
-      box-shadow: var(--box-shadow)
+  .btn {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 45px;
+    width: fit-content;
+    padding: 0 22px;
+    border-radius: 10px;
+    color: var(--color-white);
+    background-color: var(--main-color);
+    cursor: pointer;
   }
   
-  .guardar--btn:hover {
+  .btn:hover {
       background-color: var(--btn-color-hover);
+  }
+
+  .btn-color-red {
+    background-color: var(--btn-color-red);
   }
   
   /* Arrow btn */
   .list {
       padding: 1rem;
-      margin-left: auto;
-      margin-right: auto;
       display: flex;
       flex-wrap: wrap;
-      justify-content: space-between;
   }
   .toggle-list {
+    flex: auto;
     width: 30%;
     margin-top: 12px;
   }
@@ -96,14 +99,16 @@
       box-shadow: var(--box-shadow);
       cursor: pointer;
   }
+
+  .panel:hover {
+      background-color: var(--input-hover-color);
+      border: 1px solid var(--main-color);
+  }
+  /* Contenido del panel */
   .name-cad {
       font-size: 1.1rem;
       font-weight: 600;
       color: var(--color-black);
-  }
-  .panel:hover {
-      background-color: var(--input-hover-color);
-      border: 1px solid var(--main-color);
   }
   .arrow-btn {
       font-size: 25px;
@@ -112,7 +117,7 @@
   .arrow-btn:hover {
       color: var(--btn-color-hover);
   }
-  
+  /* Panel de info */
   .panel-info {
       margin: 0.3rem 0;
       padding: 0.3rem 1.2rem;
@@ -130,3 +135,49 @@
   .panel-info p {
       margin: 12px 0;
   }
+
+  /* ========================= */
+/* Modal */
+
+.modal-window {
+    position: fixed;
+    background-color: rgba(255, 225, 255, 0.25);
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 999;
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s;
+}
+
+.modal-window:target {
+    visibility: visible;
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.modal-window > div {
+    width: 400px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 2em;
+    background-color: #fff;
+}
+
+.modal-window h3 {
+    font-size: 150%;
+    margin: 0 0 15px;
+}
+
+/* .container-modal {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+} */

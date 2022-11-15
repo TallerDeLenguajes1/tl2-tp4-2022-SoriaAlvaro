@@ -3,9 +3,9 @@
     ViewData["Title"] = "AltaCadete";
 }
 <h2>@ViewData["Title"]</h2>
-
-<div class="form">
-    <form asp-controller="Cadete" asp-action="GuardarCadete" method="post">
+<div class="container-alta">
+    <form asp-controller="Cadete" asp-action="GuardarCadete" method="post" class="form">
+        <p asp-for="Id">@ViewData["idCad"]</p>
         <div class="input-group">
             <div class="input">
                 <label for="name">Nombre</label>
@@ -20,6 +20,9 @@
                 <input type="tel" id="phone" asp-for="Phone" placeholder="(+54) Tel" required>
             </div>
         </div>
-        <input type="submit" value="Guardar" class="guardar--btn">
+        <input type="submit" value="Guardar" class="btn">
     </form>
+    <div class="adicional-btn">
+        <a asp-area="" asp-controller="Cadete" asp-action="Index" class="btn">Lista de Cadetes</a>
+    </div>
 </div>

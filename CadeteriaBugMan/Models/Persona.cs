@@ -12,9 +12,9 @@ namespace CadeteriaBugMan.Models
         public string? Address { get; set; }
         public double Phone { get; set; }
 
-        public Persona()
+        /* public Persona()
         {
-            Id = 0;
-        }
+            this.Id = 0;
+        } */
     }
 }
